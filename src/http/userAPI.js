@@ -1,12 +1,12 @@
 import { $authHost, $host } from "./index";
 
 export const registration = async (first_name, last_name, email, password, phone='') => {
-  const response = await $host.post("auth/register/", { email, password, first_name, last_name, phone })
+  const response = await $host.post("users/register/", { email, password, first_name, last_name, phone })
   return response.data
 }
 
 export const login = async ( username, password ) => {
-  const response = await $host.post("auth/jwt/login/", 
+  const response = await $host.post("users/jwt/login/", 
     { username, password }, {
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
@@ -35,7 +35,7 @@ export const forgotUserPassword = async (email) => {
 }
 
 export const resetUserPassword = async (token, password) => {
-  const response = await $host.post('auth/reset-password', {token, password})
+  const response = await $host.post('users/reset-password', {token, password})
   return response.data
 }
 
