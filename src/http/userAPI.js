@@ -20,7 +20,7 @@ export const login = async ( username, password ) => {
 // Retrieving user data; if the token is not valid, we won't get anything
 export const check = async () => {
   localStorage.setItem("token", localStorage.getItem("token"));
-  const response = await $authHost.get(`protected-route`);
+  const response = await $authHost.get(`/users/me`);
   return response.data
 }
 
