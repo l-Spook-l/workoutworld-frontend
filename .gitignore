@@ -26,4 +26,4 @@ yarn-error.log*
 .env-non-dev
 
 /nginxOld
-.forDev.txt
+forDev.txt
