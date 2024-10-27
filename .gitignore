@@ -24,3 +24,5 @@ yarn-error.log*
 
 .env
 .env-non-dev
+
+/nginxOld
